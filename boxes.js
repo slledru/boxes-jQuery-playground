@@ -28,22 +28,30 @@ $(document).ready(() => {
   // // }
   // $('#container div').not('.row').not('#secretBox').width('2px');
 
-  //
+  // Exercise #3
+  // add package console-log
   // $('#container').click((event) => {
   //   event.preventDefault();
   //   console.log(event.screenX, event.screenY);
   // });
-  // let a = $('<a href="http://galvanize.com">Galvanize</a>');
-  // $('.boxType1').append(a);
-  // $('.box').click((event) => {
+
+  // $('#container').on('click', (event) => {
   //   event.preventDefault();
-  //   console.log($(event.target));
-  //   let img = $('<img src="images/cute_puppy.jpg" width="150px">');
-  //   $(this).append(img);
-  //   if ($(this).has('img')) {
-  //
-  //   } else {
-  //
-  //   }
+  //   console.log(event.screenX, event.screenY);
   // });
+
+  // let a = $('<a href="http://www.galvanize.com">Galvanize</a>');
+  // $('.boxType1').append(a).click((event) => {
+  //   event.preventDefault();
+  //   alert('you can never leave the page');
+  // });
+  $('.box').click((event) => {
+    event.preventDefault();
+    if ($(event.target).is('img')) {
+      $(event.target).remove('img');
+    } else {
+      let img = $('<img src="images/cute_puppy.jpg" width="150px">');
+      $(event.target).append(img);
+    }
+  });
 });
