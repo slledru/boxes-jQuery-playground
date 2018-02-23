@@ -41,3 +41,8 @@
 .boxType3 {
   background: blue;
 }
+
+.puppyClass {
+  background-image: url('./images/cute_puppy.jpg');
+  background-size: 150px 120px;
+}

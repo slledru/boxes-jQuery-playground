@@ -45,13 +45,24 @@ $(document).ready(() => {
   //   event.preventDefault();
   //   alert('you can never leave the page');
   // });
-  $('.box').click((event) => {
+  // $('.box').click((event) => {
+  //   event.preventDefault();
+  //   // if ($(event.target).is('img')) {
+  //   //   $(event.target).remove('img');
+  //   // } else {
+  //   //   let img = $('<img src="images/cute_puppy.jpg" width="150px">');
+  //   //   $(event.target).append(img);
+  //   // }
+  //   $(event.target).toggleClass('puppyClass');
+  // });
+  $('#container').click((event) => {
     event.preventDefault();
-    if ($(event.target).is('img')) {
-      $(event.target).remove('img');
+    // if ($(event.target).is('#container')) {
+    if (event.target.id === 'container') {
+      $(event.target).css('background-color', 'limegreen');
     } else {
-      let img = $('<img src="images/cute_puppy.jpg" width="150px">');
-      $(event.target).append(img);
+      $(event.target).css('background-color', 'white');
+      $(event.target).parent().parent().css('background-color', 'black');
     }
   });
 });
